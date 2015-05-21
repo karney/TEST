@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B504C7C1-F4E4-416A-901A-596AC131DF4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MYS2015Data</RootNamespace>
+    <AssemblyName>MYS2015Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Breeze.ContextProvider">
+      <HintPath>..\packages\Breeze.Server.ContextProvider.1.5.4\lib\Breeze.ContextProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.ContextProvider.EF6">
+      <HintPath>..\packages\Breeze.Server.ContextProvider.EF6.1.5.4\lib\Breeze.ContextProvider.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Models\Auth\AuthModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Auth\AuthModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Auth\AuthModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Auth\Company.cs">
+      <DependentUpon>AuthModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activities_History.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activities_Items.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activities_Items_Assets.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activities_Items_CustomFieldDetails.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activities_Items_CustomFormDetails.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activities_Items_ServiceListItems.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activities_Items_Status.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activities_Items_Types.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activities_Items_UserAssociations.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Activity.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Asset.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Assets_History.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Assets_Parts.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Assets_ServiceHistory.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Assets_SubTypes.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Assets_Types.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Asset_Parts_History.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\CompanyModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\CompanyModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\CompanyModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Customer.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Document.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Documents_Data.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\HistoryNote.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\JobRequest.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\JobRequest_Assets.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\JobRequest_Parts.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Quote.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Quotes_Items.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\Stock.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\TaxCode.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company\ToDoListItem.cs">
+      <DependentUpon>CompanyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CompanyRepository.cs" />
+    <Compile Include="Repositories\AuthRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Models\Company\CompanyModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CompanyModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Models\Auth\AuthModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AuthModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Auth\AuthModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AuthModel.edmx</DependentUpon>
+      <LastGenOutput>AuthModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Models\Auth\AuthModel.edmx.diagram">
+      <DependentUpon>AuthModel.edmx</DependentUpon>
+    </None>
+    <None Include="Models\Auth\AuthModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AuthModel.edmx</DependentUpon>
+      <LastGenOutput>AuthModel.cs</LastGenOutput>
+    </None>
+    <None Include="Models\Company\CompanyModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CompanyModel.edmx</DependentUpon>
+      <LastGenOutput>CompanyModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Models\Company\CompanyModel.edmx.diagram">
+      <DependentUpon>CompanyModel.edmx</DependentUpon>
+    </None>
+    <None Include="Models\Company\CompanyModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CompanyModel.edmx</DependentUpon>
+      <LastGenOutput>CompanyModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

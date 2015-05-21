@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d72469a4c0b54dc594f66774e79fd5f7" Name="Diagram1">
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activity" Width="1.5" PointX="5.25" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activities_History" Width="1.5" PointX="7.5" PointY="60.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activities_Items" Width="1.5" PointX="10.5" PointY="52.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activities_Items_Assets" Width="1.5" PointX="18.5" PointY="60.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activities_Items_CustomFieldDetails" Width="1.5" PointX="15" PointY="78.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activities_Items_CustomFormDetails" Width="1.5" PointX="12.75" PointY="77.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activities_Items_ServiceListItems" Width="1.5" PointX="15.75" PointY="56.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activities_Items_Status" Width="1.5" PointX="8.25" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activities_Items_Types" Width="1.5" PointX="10.5" PointY="73.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Activities_Items_UserAssociations" Width="1.5" PointX="12.75" PointY="86.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Asset_Parts_History" Width="1.5" PointX="25.75" PointY="64.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Asset" Width="1.5" PointX="13.25" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Assets_History" Width="1.5" PointX="15.5" PointY="61" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Assets_Parts" Width="1.5" PointX="23.5" PointY="56.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Assets_ServiceHistory" Width="1.5" PointX="7.5" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Assets_SubTypes" Width="1.5" PointX="11" PointY="49.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Assets_Types" Width="1.5" PointX="11" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Customer" Width="1.5" PointX="3" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Document" Width="1.5" PointX="15.5" PointY="64" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Documents_Data" Width="1.5" PointX="13.25" PointY="45.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.HistoryNote" Width="1.5" PointX="18.5" PointY="65.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.JobRequest_Assets" Width="1.5" PointX="26" PointY="61" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.JobRequest_Parts" Width="1.5" PointX="25.75" PointY="67.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.JobRequest" Width="1.5" PointX="20.75" PointY="62.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Quote" Width="1.5" PointX="8.25" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Quotes_Items" Width="1.5" PointX="20.75" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.Stock" Width="1.5" PointX="8.25" PointY="64.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.TaxCode" Width="1.5" PointX="0.75" PointY="59.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyndYourServiceCompanyModel.ToDoListItem" Width="1.5" PointX="12.75" PointY="109.25" IsExpanded="true" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Customers1" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_History_Activities" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Activities" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_ServiceHistory_Activities" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Documents_Activities" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_HistoryNotes_Activities" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_History_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Activities_Items_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Activities_Items_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Assets_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_CustomFormDetails_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_JobRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Quotes" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_ServiceListItems_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_UserAssociations_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Documents_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_HistoryNotes_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_JobRequests_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Quotes_Items_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_TodoListItems_Activities_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Assets_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_CustomFieldDetails_Activities_Items_CustomFormDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_CustomFieldDetailsLinker_Activities_Items_CustomFieldDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_ServiceListItems_Assets_Parts" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_CalloutCharge_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_Charge1_25_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_Charge1_5_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_Charge1_75_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_Charge2_0_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_Charge2_25_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_Charge2_5_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_KmCharge_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_MilesCharge_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_NormalCharge_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_OutOfHoursCharge_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Activities_Items_Types_TravelCharge_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_JobRequests_Activities_Items_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Asset_Parts_History_Assets_Parts" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_Assets_SubTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_Assets_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_Customers1" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_Customers2" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_History_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_Parts_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_ServiceHistory_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Documents_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_HistoryNotes_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_JobRequest_Assets_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Assets_Parts_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Documents_Assets_Parts" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_HistoryNotes_Assets_Parts" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_JobRequest_Parts_Assets_Parts" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.NewAssetPart" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.ReplacedAssetPart" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Customers_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Customers_TaxCodes" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Documents_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_HistoryNotes_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_JobRequests_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_JobRequests_Sites" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Quotes_Items_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Stock_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Documents_Documents_Data" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Documents_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_HistoryNotes_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_JobRequest_Assets_JobRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_JobRequest_Parts_JobRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Quotes_Items_Quotes" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Quotes_Items_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Quotes_Items_TaxCodes" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Stock_PurchaseTaxCodes" ManuallyRouted="false" />
+        <AssociationConnector Association="MyndYourServiceCompanyModel.FK_Stock_TaxCodes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

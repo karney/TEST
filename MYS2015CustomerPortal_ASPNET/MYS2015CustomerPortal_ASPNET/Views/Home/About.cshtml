@@ -1,7 +1,29 @@
-﻿@{
+﻿@using MYS2015CustomerPortal_ASPNET.Controllers
+@using MYS2015Data.Models.Company
+@{
     ViewBag.Title = "About";
 }
+
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+
+@(Html.Kendo().Grid<Customer>()
+      .Name("grid")
+      .DataSource(dataSource => dataSource // Configure the grid data source
+          .Ajax() // Specify that ajax binding is used
+              .Read(read => read.Action("GetCustomers", "Home")) // Set the action method which will return the data in JSON format
+       )
+      .Columns(columns =>
+      {
+          // Create a column bound to the ProductID property
+          columns.Bound(product => product.BillingEmail);
+          // Create a column bound to the ProductName property
+          columns.Bound(product => product.Phone);
+          // Create a column bound to the UnitsInStock property
+          columns.Bound(product => product.CustomerName);
+      })
+      .Pageable() // Enable paging
+      .Sortable() // Enable sorting
+      )

@@ -1,0 +1,826 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MindYourServiceAuthenticationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Companies">
+          <Key>
+            <PropertyRef Name="ProfileCompanyID" />
+          </Key>
+          <Property Name="ProfileCompanyID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Industry" Type="nvarchar" MaxLength="200" />
+          <Property Name="NumEmployees" Type="int" />
+          <Property Name="HearAbout" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="128" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="128" />
+          <Property Name="Address3" Type="nvarchar" MaxLength="128" />
+          <Property Name="Address4" Type="nvarchar" MaxLength="128" />
+          <Property Name="City" Type="nvarchar" MaxLength="128" />
+          <Property Name="State" Type="nvarchar" MaxLength="128" />
+          <Property Name="Country" Type="nvarchar" MaxLength="128" />
+          <Property Name="ZipCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="WorkPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Website" Type="nvarchar" MaxLength="500" />
+          <Property Name="Logo" Type="image" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="LastModified" Type="datetime" />
+          <Property Name="ContactFirstname" Type="nvarchar" MaxLength="128" />
+          <Property Name="ContactSurname" Type="nvarchar" MaxLength="128" />
+          <Property Name="CompanyServer" Type="nvarchar" MaxLength="200" />
+          <Property Name="CompanyCatalog" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubscriptionStatus" Type="int" Nullable="false" />
+          <Property Name="TrialEndDate" Type="datetime" Nullable="false" />
+          <Property Name="CardPrefix" Type="nvarchar" MaxLength="50" />
+          <Property Name="CardFirstname" Type="nvarchar" MaxLength="128" />
+          <Property Name="CardSurname" Type="nvarchar" MaxLength="128" />
+          <Property Name="SubscriberEmail" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubscriberPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="CardType" Type="int" />
+          <Property Name="CardName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="200" />
+          <Property Name="ExpiryDateMonth" Type="int" />
+          <Property Name="ExpiryDateYear" Type="int" />
+          <Property Name="StartDateMonth" Type="int" />
+          <Property Name="StartDateYear" Type="int" />
+          <Property Name="CardAddress1" Type="nvarchar" MaxLength="200" />
+          <Property Name="CardAddress2" Type="nvarchar" MaxLength="200" />
+          <Property Name="CardAddress3" Type="nvarchar" MaxLength="200" />
+          <Property Name="CardAddress4" Type="nvarchar" MaxLength="200" />
+          <Property Name="CardCity" Type="nvarchar" MaxLength="128" />
+          <Property Name="CardZipCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CardState" Type="nvarchar" MaxLength="50" />
+          <Property Name="CardCountry" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreationDate1" Type="datetime" />
+          <Property Name="LastModifiedDate" Type="datetime" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="SDataUrl" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SDataUN" Type="nvarchar" MaxLength="200" />
+          <Property Name="SDataPW" Type="nvarchar" MaxLength="200" />
+          <Property Name="QuickBooksUrl" Type="nvarchar(max)" />
+          <Property Name="QuickBooksUN" Type="nvarchar" MaxLength="200" />
+          <Property Name="QuickBooksPW" Type="nvarchar" MaxLength="200" />
+          <Property Name="JobSheetEmailHTML" Type="nvarchar(max)" />
+          <Property Name="VATNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="UsesSage" Type="bit" />
+          <Property Name="UsesReports" Type="bit" />
+          <Property Name="CurrencyCharacter" Type="nvarchar" MaxLength="1" />
+          <Property Name="IsFreemium" Type="bit" />
+          <Property Name="CustomerPortalEnabled" Type="bit" />
+          <Property Name="ViewAssets" Type="bit" />
+          <Property Name="ViewParts" Type="bit" />
+          <Property Name="ViewJobs" Type="bit" />
+          <Property Name="ViewRequests" Type="bit" />
+          <Property Name="ViewSites" Type="bit" />
+          <Property Name="CanAddAssets" Type="bit" />
+          <Property Name="CanEditAssets" Type="bit" />
+          <Property Name="CanAddParts" Type="bit" />
+          <Property Name="CanEditParts" Type="bit" />
+          <Property Name="ViewAssetDocs" Type="bit" />
+          <Property Name="ViewPartDocs" Type="bit" />
+          <Property Name="ViewJobDocs" Type="bit" />
+          <Property Name="ViewAssetHistory" Type="bit" />
+          <Property Name="ViewPartHistory" Type="bit" />
+          <Property Name="ViewJobHistory" Type="bit" />
+          <Property Name="CanEditSites" Type="bit" />
+          <Property Name="CanAddSites" Type="bit" />
+          <Property Name="ViewSiteDocs" Type="bit" />
+          <Property Name="ViewSiteHistory" Type="bit" />
+          <Property Name="JobRequestEmail" Type="nvarchar" MaxLength="500" />
+          <Property Name="ShowOwnLogo" Type="bit" />
+          <Property Name="NotifyCustomerOnJobCompletion" Type="bit" />
+          <Property Name="NotifyCustomerOnJobAssignment" Type="bit" />
+          <Property Name="NotifyCustomerOnJobCreation" Type="bit" />
+          <Property Name="NotifyEngineerByEmailOfJobAssignment" Type="bit" />
+          <Property Name="CustomerEmailJobTemplate" Type="nvarchar(max)" />
+          <Property Name="CustomerEmailJobSubject" Type="nvarchar" MaxLength="500" />
+          <Property Name="CustomerEmailQuoteTemplate" Type="nvarchar(max)" />
+          <Property Name="CustomerEmailQuoteSubject" Type="nvarchar" MaxLength="500" />
+          <Property Name="EmailCompleteJobsInternallyTo" Type="nvarchar(max)" />
+          <Property Name="CustomerEmailPortalSettingsTemplate" Type="nvarchar(max)" />
+          <Property Name="CustomerEmailPortalSettingsSubject" Type="nvarchar" MaxLength="500" />
+          <Property Name="NotificationID" Type="bigint" />
+          <Property Name="CompanyTargetID" Type="bigint" />
+          <Property Name="dbEnabled" Type="bit" />
+          <Property Name="dbType" Type="int" />
+          <Property Name="dbUN" Type="nvarchar(max)" />
+          <Property Name="dbPW" Type="nvarchar(max)" />
+          <Property Name="dbToken" Type="nvarchar(max)" />
+          <Property Name="dbCustFolder" Type="nvarchar(max)" />
+          <Property Name="dbSiteFolder" Type="nvarchar(max)" />
+          <Property Name="dbSuppFolder" Type="nvarchar(max)" />
+          <Property Name="dbJobsFolder" Type="nvarchar(max)" />
+          <Property Name="dbQuotesFolder" Type="nvarchar(max)" />
+          <Property Name="dbAssetsFolder" Type="nvarchar(max)" />
+          <Property Name="dbAssetPartsFolder" Type="nvarchar(max)" />
+          <Property Name="dbOrdersFolder" Type="nvarchar(max)" />
+          <Property Name="dbInvoicesFolder" Type="nvarchar(max)" />
+          <Property Name="dbContractsFolder" Type="nvarchar(max)" />
+          <Property Name="dbPurchaseOrdersFolder" Type="nvarchar(max)" />
+          <Property Name="APIEnabled" Type="bit" />
+          <Property Name="LocalDiallingCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="dbProjectsFolder" Type="nvarchar(max)" />
+          <Property Name="NotifyJobCustomerOnHold" Type="bit" />
+          <Property Name="NotifyJobsInCloseProximity" Type="bit" />
+          <Property Name="NotifyOnJobOverlap" Type="bit" />
+          <Property Name="Cal_ShowWH" Type="bit" />
+          <Property Name="Cal_ShowCostings" Type="bit" />
+          <Property Name="Cal_ShowTimeUtil" Type="bit" />
+          <Property Name="RequireStockToAssignJob" Type="bit" />
+          <Property Name="Job_ReqCustSig" Type="bit" />
+          <Property Name="Job_ReqUserSig" Type="bit" />
+          <Property Name="Order_ConsolQuantities" Type="bit" />
+          <Property Name="Order_ChargeParts" Type="bit" />
+          <Property Name="Order_ChargeLabour" Type="bit" />
+          <Property Name="Order_ChargeExpenses" Type="bit" />
+          <Property Name="Order_ShowContractDesc" Type="bit" />
+          <Property Name="Order_CheckForContracts" Type="bit" />
+          <Property Name="Order_IncJobID" Type="bit" />
+          <Property Name="Order_IncWorkDone" Type="bit" />
+          <Property Name="Order_IncFurtherWork" Type="bit" />
+          <Property Name="Order_IncJobUser" Type="bit" />
+          <Property Name="Order_IncJobAddress" Type="bit" />
+          <Property Name="Order_IncJobAssetDetails" Type="bit" />
+          <Property Name="Order_IncJobDate" Type="bit" />
+          <Property Name="Order_ConsolTotalPriceForJob" Type="bit" />
+          <Property Name="Order_ConsolTotalPriceSeperatePartsLabour" Type="bit" />
+          <Property Name="Order_TextItemNominalCode" Type="bigint" />
+          <Property Name="Job_CopyFaultDetails" Type="bit" />
+          <Property Name="Order_IncWorkToBeDone" Type="bit" />
+          <Property Name="Stock_ReduceOnJob" Type="bit" />
+          <Property Name="Stock_ReduceOnOrder" Type="bit" />
+          <Property Name="Order_CarriageNominalCode" Type="bigint" />
+          <Property Name="Job_CopyJobTypeDetails" Type="bit" />
+          <Property Name="SyncSageStock" Type="bit" />
+          <Property Name="SyncSageStockOnce" Type="bit" />
+          <Property Name="SyncSageStockCount" Type="int" Nullable="false" />
+          <Property Name="SyncSageStockMaxItems" Type="int" Nullable="false" />
+          <Property Name="SyncSageStockPageSize" Type="int" Nullable="false" />
+          <Property Name="SyncSagePricesCount" Type="int" Nullable="false" />
+          <Property Name="SyncSagePricesMaxItems" Type="int" Nullable="false" />
+          <Property Name="SyncSagePricesPageSize" Type="int" Nullable="false" />
+          <Property Name="SyncSageCustomers" Type="bit" />
+          <Property Name="SyncSageCustomersCount" Type="int" Nullable="false" />
+          <Property Name="SyncSageCustomersMaxItems" Type="int" Nullable="false" />
+          <Property Name="SyncSageCustomersPageSize" Type="int" Nullable="false" />
+          <Property Name="SyncSageDeliveryAddressesCount" Type="int" Nullable="false" />
+          <Property Name="SyncSageDeliveryAddressesMaxItems" Type="int" Nullable="false" />
+          <Property Name="SyncSageDeliveryAddressesPageSize" Type="int" Nullable="false" />
+          <Property Name="SyncSageContacts" Type="bit" />
+          <Property Name="SyncSageContactsCount" Type="int" Nullable="false" />
+          <Property Name="SyncSageContactsMaxItems" Type="int" Nullable="false" />
+          <Property Name="SyncSageContactsPageSize" Type="int" Nullable="false" />
+          <Property Name="SyncSageSuppliers" Type="bit" />
+          <Property Name="SyncPostSite" Type="bit" />
+          <Property Name="SyncSage" Type="bit" />
+          <Property Name="SyncSageDeliveryAddresses" Type="bit" />
+          <Property Name="SyncSageContactsEmails" Type="bit" />
+          <Property Name="SyncSageContactsTels" Type="bit" />
+          <Property Name="SyncSageContactsAddresses" Type="bit" />
+          <Property Name="SyncSageCustomersEmails" Type="bit" />
+          <Property Name="SyncSageCustomersTels" Type="bit" />
+          <Property Name="SyncOrdersAlwaysSync" Type="bit" />
+          <Property Name="SyncPOrdersAlwaysSync" Type="bit" />
+          <Property Name="UseTextMarketing" Type="bit" />
+          <Property Name="tmUsername" Type="nvarchar(max)" />
+          <Property Name="tmPassword" Type="nvarchar(max)" />
+          <Property Name="ResellerID" Type="uniqueidentifier" />
+          <Property Name="Invoice_Borderless" Type="bit" />
+          <Property Name="AllowZeroStockOnDevice" Type="bit" />
+          <Property Name="AllowSearchAllCustomerSites" Type="bit" />
+          <Property Name="AutoRefreshJobList" Type="bit" />
+          <Property Name="CustomersDropdown" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeOfRates" Type="int" />
+          <Property Name="itemUnspecified" Type="nvarchar" MaxLength="50" />
+          <Property Name="accountAPName" Type="nvarchar" MaxLength="50" />
+          <Property Name="accountARName" Type="nvarchar" MaxLength="50" />
+          <Property Name="accountExpenseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="accountIncomeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="QBOSync" Type="bit" />
+          <Property Name="QBOPayments" Type="bit" />
+          <Property Name="QBOPaymentsNo" Type="int" />
+          <Property Name="QBOCustomers" Type="bit" />
+          <Property Name="QBOCustomersNo" Type="int" />
+          <Property Name="QBOSites" Type="bit" />
+          <Property Name="QBOSitesNo" Type="int" />
+          <Property Name="QBOSuppliers" Type="bit" />
+          <Property Name="QBOSuppliersNo" Type="int" />
+          <Property Name="QBOTaxCodes" Type="bit" />
+          <Property Name="QBOTaxCodesNo" Type="int" />
+          <Property Name="QBOOrders" Type="bit" />
+          <Property Name="QBOOrdersNo" Type="int" />
+          <Property Name="QBOPurchaseOrders" Type="bit" />
+          <Property Name="QBOPurchaseOrdersNo" Type="int" />
+          <Property Name="QBOPaymentTypes" Type="bit" />
+          <Property Name="QBOPaymentTypesNo" Type="int" />
+          <Property Name="QBOStock" Type="bit" />
+          <Property Name="QBOStockNo" Type="int" />
+          <Property Name="AllowSearchAllSiteCustomers" Type="bit" />
+          <Property Name="SearchSitesInCustomersList" Type="bit" />
+          <Property Name="SearchCustomersInSitesList" Type="bit" />
+          <Property Name="AlwaysShowCurrentPosition" Type="bit" />
+          <Property Name="IsShowLastPosition" Type="bit" />
+          <Property Name="SetDefaultPosition" Type="int" />
+          <Property Name="PrefixJobId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SuffixJobId" Type="nvarchar" MaxLength="50" />
+          <Property Name="DefaultAddress1" Type="nvarchar" MaxLength="128" />
+          <Property Name="DefaultAddress2" Type="nvarchar" MaxLength="128" />
+          <Property Name="DefaultAddress3" Type="nvarchar" MaxLength="128" />
+          <Property Name="DefaultAddress4" Type="nvarchar" MaxLength="128" />
+          <Property Name="DefaultCity" Type="nvarchar" MaxLength="128" />
+          <Property Name="DefaultState" Type="nvarchar" MaxLength="128" />
+          <Property Name="DefaultCountry" Type="nvarchar" MaxLength="128" />
+          <Property Name="DefaultZipCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="DefaultFilterJobsAssets" Type="int" />
+          <Property Name="UsesQuickbooks" Type="bit" />
+          <Property Name="UsesSage300" Type="bit" />
+          <Property Name="SyncSage300" Type="bit" />
+          <Property Name="UsesSap" Type="bit" />
+          <Property Name="SyncSap" Type="bit" />
+          <Property Name="dbSalesInvoicesFolder" Type="nvarchar(max)" />
+          <Property Name="dbCreditNotesFolder" Type="nvarchar(max)" />
+          <Property Name="dbPurchaseInvoicesFolder" Type="nvarchar(max)" />
+          <Property Name="DocStorageCapacity" Type="bigint" />
+          <Property Name="TotalUsedStorage" Type="bigint" />
+          <Property Name="JobCostsCalculationType" Type="int" />
+          <Property Name="UseCostsFromPO" Type="bit" />
+          <Property Name="UsedJobRevenueType" Type="int" />
+          <Property Name="JobOrder" Type="int" />
+          <Property Name="EnableFPriceForCustomer" Type="bit" />
+          <Property Name="ServiceLinkCompany" Type="nvarchar(max)" />
+          <Property Name="Job_UseSiteMailPhone" Type="bit" />
+          <Property Name="Job_UseCustomerMailPhone" Type="bit" />
+          <Property Name="IsPaidForGPS" Type="bit" />
+          <Property Name="MergeProjOnCompletion" Type="bit" />
+          <Property Name="MergeProjCharges" Type="bit" />
+          <Property Name="MergeProjParts" Type="bit" />
+          <Property Name="MergeProjComments" Type="bit" />
+          <Property Name="MergeProjForms" Type="bit" />
+          <Property Name="AutoConvertSDToJob" Type="bit" />
+          <Property Name="DaysToCleanGPSData" Type="int" />
+        </EntityType>
+        <EntityContainer Name="MindYourServiceAuthenticationModelStoreContainer">
+          <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MindYourServiceAuthenticationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:ib12="http://www.ideablade.com/edm/2012">
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ProfileCompanyID" />
+          </Key>
+          <Property Name="ProfileCompanyID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Industry" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NumEmployees" Type="Int32" />
+          <Property Name="HearAbout" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Address3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Address4" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ZipCode" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="WorkPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="LastModified" Type="DateTime" Precision="3" />
+          <Property Name="ContactFirstname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ContactSurname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyServer" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyCatalog" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubscriptionStatus" Type="Int32" Nullable="false" />
+          <Property Name="TrialEndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CardPrefix" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CardFirstname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CardSurname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SubscriberEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubscriberPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CardType" Type="Int32" />
+          <Property Name="CardName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CardNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ExpiryDateMonth" Type="Int32" />
+          <Property Name="ExpiryDateYear" Type="Int32" />
+          <Property Name="StartDateMonth" Type="Int32" />
+          <Property Name="StartDateYear" Type="Int32" />
+          <Property Name="CardAddress1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CardAddress2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CardAddress3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CardAddress4" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CardCity" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CardZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CardState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CardCountry" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate1" Type="DateTime" Precision="3" />
+          <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="SDataUrl" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SDataUN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SDataPW" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="QuickBooksUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuickBooksUN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="QuickBooksPW" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="JobSheetEmailHTML" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VATNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UsesSage" Type="Boolean" />
+          <Property Name="UsesReports" Type="Boolean" />
+          <Property Name="CurrencyCharacter" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="IsFreemium" Type="Boolean" />
+          <Property Name="CustomerPortalEnabled" Type="Boolean" />
+          <Property Name="ViewAssets" Type="Boolean" />
+          <Property Name="ViewParts" Type="Boolean" />
+          <Property Name="ViewJobs" Type="Boolean" />
+          <Property Name="ViewRequests" Type="Boolean" />
+          <Property Name="ViewSites" Type="Boolean" />
+          <Property Name="CanAddAssets" Type="Boolean" />
+          <Property Name="CanEditAssets" Type="Boolean" />
+          <Property Name="CanAddParts" Type="Boolean" />
+          <Property Name="CanEditParts" Type="Boolean" />
+          <Property Name="ViewAssetDocs" Type="Boolean" />
+          <Property Name="ViewPartDocs" Type="Boolean" />
+          <Property Name="ViewJobDocs" Type="Boolean" />
+          <Property Name="ViewAssetHistory" Type="Boolean" />
+          <Property Name="ViewPartHistory" Type="Boolean" />
+          <Property Name="ViewJobHistory" Type="Boolean" />
+          <Property Name="CanEditSites" Type="Boolean" />
+          <Property Name="CanAddSites" Type="Boolean" />
+          <Property Name="ViewSiteDocs" Type="Boolean" />
+          <Property Name="ViewSiteHistory" Type="Boolean" />
+          <Property Name="JobRequestEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ShowOwnLogo" Type="Boolean" />
+          <Property Name="NotifyCustomerOnJobCompletion" Type="Boolean" />
+          <Property Name="NotifyCustomerOnJobAssignment" Type="Boolean" />
+          <Property Name="NotifyCustomerOnJobCreation" Type="Boolean" />
+          <Property Name="NotifyEngineerByEmailOfJobAssignment" Type="Boolean" />
+          <Property Name="CustomerEmailJobTemplate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerEmailJobSubject" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerEmailQuoteTemplate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerEmailQuoteSubject" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EmailCompleteJobsInternallyTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerEmailPortalSettingsTemplate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerEmailPortalSettingsSubject" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NotificationID" Type="Int64" />
+          <Property Name="CompanyTargetID" Type="Int64" />
+          <Property Name="dbEnabled" Type="Boolean" />
+          <Property Name="dbType" Type="Int32" />
+          <Property Name="dbUN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbPW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbToken" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbCustFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbSiteFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbSuppFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbJobsFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbQuotesFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbAssetsFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbAssetPartsFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbOrdersFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbInvoicesFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbContractsFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbPurchaseOrdersFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="APIEnabled" Type="Boolean" />
+          <Property Name="LocalDiallingCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="dbProjectsFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NotifyJobCustomerOnHold" Type="Boolean" />
+          <Property Name="NotifyJobsInCloseProximity" Type="Boolean" />
+          <Property Name="NotifyOnJobOverlap" Type="Boolean" />
+          <Property Name="Cal_ShowWH" Type="Boolean" />
+          <Property Name="Cal_ShowCostings" Type="Boolean" />
+          <Property Name="Cal_ShowTimeUtil" Type="Boolean" />
+          <Property Name="RequireStockToAssignJob" Type="Boolean" />
+          <Property Name="Job_ReqCustSig" Type="Boolean" />
+          <Property Name="Job_ReqUserSig" Type="Boolean" />
+          <Property Name="Order_ConsolQuantities" Type="Boolean" />
+          <Property Name="Order_ChargeParts" Type="Boolean" />
+          <Property Name="Order_ChargeLabour" Type="Boolean" />
+          <Property Name="Order_ChargeExpenses" Type="Boolean" />
+          <Property Name="Order_ShowContractDesc" Type="Boolean" />
+          <Property Name="Order_CheckForContracts" Type="Boolean" />
+          <Property Name="Order_IncJobID" Type="Boolean" />
+          <Property Name="Order_IncWorkDone" Type="Boolean" />
+          <Property Name="Order_IncFurtherWork" Type="Boolean" />
+          <Property Name="Order_IncJobUser" Type="Boolean" />
+          <Property Name="Order_IncJobAddress" Type="Boolean" />
+          <Property Name="Order_IncJobAssetDetails" Type="Boolean" />
+          <Property Name="Order_IncJobDate" Type="Boolean" />
+          <Property Name="Order_ConsolTotalPriceForJob" Type="Boolean" />
+          <Property Name="Order_ConsolTotalPriceSeperatePartsLabour" Type="Boolean" />
+          <Property Name="Order_TextItemNominalCode" Type="Int64" />
+          <Property Name="Job_CopyFaultDetails" Type="Boolean" />
+          <Property Name="Order_IncWorkToBeDone" Type="Boolean" />
+          <Property Name="Stock_ReduceOnJob" Type="Boolean" />
+          <Property Name="Stock_ReduceOnOrder" Type="Boolean" />
+          <Property Name="Order_CarriageNominalCode" Type="Int64" />
+          <Property Name="Job_CopyJobTypeDetails" Type="Boolean" />
+          <Property Name="SyncSageStock" Type="Boolean" />
+          <Property Name="SyncSageStockOnce" Type="Boolean" />
+          <Property Name="SyncSageStockCount" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageStockMaxItems" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageStockPageSize" Type="Int32" Nullable="false" />
+          <Property Name="SyncSagePricesCount" Type="Int32" Nullable="false" />
+          <Property Name="SyncSagePricesMaxItems" Type="Int32" Nullable="false" />
+          <Property Name="SyncSagePricesPageSize" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageCustomers" Type="Boolean" />
+          <Property Name="SyncSageCustomersCount" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageCustomersMaxItems" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageCustomersPageSize" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageDeliveryAddressesCount" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageDeliveryAddressesMaxItems" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageDeliveryAddressesPageSize" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageContacts" Type="Boolean" />
+          <Property Name="SyncSageContactsCount" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageContactsMaxItems" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageContactsPageSize" Type="Int32" Nullable="false" />
+          <Property Name="SyncSageSuppliers" Type="Boolean" />
+          <Property Name="SyncPostSite" Type="Boolean" />
+          <Property Name="SyncSage" Type="Boolean" />
+          <Property Name="SyncSageDeliveryAddresses" Type="Boolean" />
+          <Property Name="SyncSageContactsEmails" Type="Boolean" />
+          <Property Name="SyncSageContactsTels" Type="Boolean" />
+          <Property Name="SyncSageContactsAddresses" Type="Boolean" />
+          <Property Name="SyncSageCustomersEmails" Type="Boolean" />
+          <Property Name="SyncSageCustomersTels" Type="Boolean" />
+          <Property Name="SyncOrdersAlwaysSync" Type="Boolean" />
+          <Property Name="SyncPOrdersAlwaysSync" Type="Boolean" />
+          <Property Name="UseTextMarketing" Type="Boolean" />
+          <Property Name="tmUsername" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tmPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ResellerID" Type="Guid" />
+          <Property Name="Invoice_Borderless" Type="Boolean" />
+          <Property Name="AllowZeroStockOnDevice" Type="Boolean" />
+          <Property Name="AllowSearchAllCustomerSites" Type="Boolean" />
+          <Property Name="AutoRefreshJobList" Type="Boolean" />
+          <Property Name="CustomersDropdown" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TypeOfRates" Type="Int32" />
+          <Property Name="itemUnspecified" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="accountAPName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="accountARName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="accountExpenseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="accountIncomeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QBOSync" Type="Boolean" />
+          <Property Name="QBOPayments" Type="Boolean" />
+          <Property Name="QBOPaymentsNo" Type="Int32" />
+          <Property Name="QBOCustomers" Type="Boolean" />
+          <Property Name="QBOCustomersNo" Type="Int32" />
+          <Property Name="QBOSites" Type="Boolean" />
+          <Property Name="QBOSitesNo" Type="Int32" />
+          <Property Name="QBOSuppliers" Type="Boolean" />
+          <Property Name="QBOSuppliersNo" Type="Int32" />
+          <Property Name="QBOTaxCodes" Type="Boolean" />
+          <Property Name="QBOTaxCodesNo" Type="Int32" />
+          <Property Name="QBOOrders" Type="Boolean" />
+          <Property Name="QBOOrdersNo" Type="Int32" />
+          <Property Name="QBOPurchaseOrders" Type="Boolean" />
+          <Property Name="QBOPurchaseOrdersNo" Type="Int32" />
+          <Property Name="QBOPaymentTypes" Type="Boolean" />
+          <Property Name="QBOPaymentTypesNo" Type="Int32" />
+          <Property Name="QBOStock" Type="Boolean" />
+          <Property Name="QBOStockNo" Type="Int32" />
+          <Property Name="AllowSearchAllSiteCustomers" Type="Boolean" />
+          <Property Name="SearchSitesInCustomersList" Type="Boolean" />
+          <Property Name="SearchCustomersInSitesList" Type="Boolean" />
+          <Property Name="AlwaysShowCurrentPosition" Type="Boolean" />
+          <Property Name="IsShowLastPosition" Type="Boolean" />
+          <Property Name="SetDefaultPosition" Type="Int32" />
+          <Property Name="PrefixJobId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SuffixJobId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultAddress1" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultAddress2" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultAddress3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultAddress4" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultCity" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultState" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultCountry" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultZipCode" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultFilterJobsAssets" Type="Int32" />
+          <Property Name="UsesQuickbooks" Type="Boolean" />
+          <Property Name="UsesSage300" Type="Boolean" />
+          <Property Name="SyncSage300" Type="Boolean" />
+          <Property Name="UsesSap" Type="Boolean" />
+          <Property Name="SyncSap" Type="Boolean" />
+          <Property Name="dbSalesInvoicesFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbCreditNotesFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dbPurchaseInvoicesFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DocStorageCapacity" Type="Int64" />
+          <Property Name="TotalUsedStorage" Type="Int64" />
+          <Property Name="JobCostsCalculationType" Type="Int32" />
+          <Property Name="UseCostsFromPO" Type="Boolean" />
+          <Property Name="UsedJobRevenueType" Type="Int32" />
+          <Property Name="JobOrder" Type="Int32" />
+          <Property Name="EnableFPriceForCustomer" Type="Boolean" />
+          <Property Name="ServiceLinkCompany" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Job_UseSiteMailPhone" Type="Boolean" />
+          <Property Name="Job_UseCustomerMailPhone" Type="Boolean" />
+          <Property Name="IsPaidForGPS" Type="Boolean" />
+          <Property Name="MergeProjOnCompletion" Type="Boolean" />
+          <Property Name="MergeProjCharges" Type="Boolean" />
+          <Property Name="MergeProjParts" Type="Boolean" />
+          <Property Name="MergeProjComments" Type="Boolean" />
+          <Property Name="MergeProjForms" Type="Boolean" />
+          <Property Name="AutoConvertSDToJob" Type="Boolean" />
+          <Property Name="DaysToCleanGPSData" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="MindYourServiceAuthenticationEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Companies" EntityType="Self.Company" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MindYourServiceAuthenticationModelStoreContainer" CdmEntityContainer="MindYourServiceAuthenticationEntities">
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="MindYourServiceAuthenticationModel.Company">
+              <MappingFragment StoreEntitySet="Companies">
+                <ScalarProperty Name="ProfileCompanyID" ColumnName="ProfileCompanyID" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Industry" ColumnName="Industry" />
+                <ScalarProperty Name="NumEmployees" ColumnName="NumEmployees" />
+                <ScalarProperty Name="HearAbout" ColumnName="HearAbout" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address3" ColumnName="Address3" />
+                <ScalarProperty Name="Address4" ColumnName="Address4" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+                <ScalarProperty Name="ContactFirstname" ColumnName="ContactFirstname" />
+                <ScalarProperty Name="ContactSurname" ColumnName="ContactSurname" />
+                <ScalarProperty Name="CompanyServer" ColumnName="CompanyServer" />
+                <ScalarProperty Name="CompanyCatalog" ColumnName="CompanyCatalog" />
+                <ScalarProperty Name="SubscriptionStatus" ColumnName="SubscriptionStatus" />
+                <ScalarProperty Name="TrialEndDate" ColumnName="TrialEndDate" />
+                <ScalarProperty Name="CardPrefix" ColumnName="CardPrefix" />
+                <ScalarProperty Name="CardFirstname" ColumnName="CardFirstname" />
+                <ScalarProperty Name="CardSurname" ColumnName="CardSurname" />
+                <ScalarProperty Name="SubscriberEmail" ColumnName="SubscriberEmail" />
+                <ScalarProperty Name="SubscriberPhone" ColumnName="SubscriberPhone" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="CardName" ColumnName="CardName" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="ExpiryDateMonth" ColumnName="ExpiryDateMonth" />
+                <ScalarProperty Name="ExpiryDateYear" ColumnName="ExpiryDateYear" />
+                <ScalarProperty Name="StartDateMonth" ColumnName="StartDateMonth" />
+                <ScalarProperty Name="StartDateYear" ColumnName="StartDateYear" />
+                <ScalarProperty Name="CardAddress1" ColumnName="CardAddress1" />
+                <ScalarProperty Name="CardAddress2" ColumnName="CardAddress2" />
+                <ScalarProperty Name="CardAddress3" ColumnName="CardAddress3" />
+                <ScalarProperty Name="CardAddress4" ColumnName="CardAddress4" />
+                <ScalarProperty Name="CardCity" ColumnName="CardCity" />
+                <ScalarProperty Name="CardZipCode" ColumnName="CardZipCode" />
+                <ScalarProperty Name="CardState" ColumnName="CardState" />
+                <ScalarProperty Name="CardCountry" ColumnName="CardCountry" />
+                <ScalarProperty Name="CreationDate1" ColumnName="CreationDate1" />
+                <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="SDataUrl" ColumnName="SDataUrl" />
+                <ScalarProperty Name="SDataUN" ColumnName="SDataUN" />
+                <ScalarProperty Name="SDataPW" ColumnName="SDataPW" />
+                <ScalarProperty Name="QuickBooksUrl" ColumnName="QuickBooksUrl" />
+                <ScalarProperty Name="QuickBooksUN" ColumnName="QuickBooksUN" />
+                <ScalarProperty Name="QuickBooksPW" ColumnName="QuickBooksPW" />
+                <ScalarProperty Name="JobSheetEmailHTML" ColumnName="JobSheetEmailHTML" />
+                <ScalarProperty Name="VATNo" ColumnName="VATNo" />
+                <ScalarProperty Name="UsesSage" ColumnName="UsesSage" />
+                <ScalarProperty Name="UsesReports" ColumnName="UsesReports" />
+                <ScalarProperty Name="CurrencyCharacter" ColumnName="CurrencyCharacter" />
+                <ScalarProperty Name="IsFreemium" ColumnName="IsFreemium" />
+                <ScalarProperty Name="CustomerPortalEnabled" ColumnName="CustomerPortalEnabled" />
+                <ScalarProperty Name="ViewAssets" ColumnName="ViewAssets" />
+                <ScalarProperty Name="ViewParts" ColumnName="ViewParts" />
+                <ScalarProperty Name="ViewJobs" ColumnName="ViewJobs" />
+                <ScalarProperty Name="ViewRequests" ColumnName="ViewRequests" />
+                <ScalarProperty Name="ViewSites" ColumnName="ViewSites" />
+                <ScalarProperty Name="CanAddAssets" ColumnName="CanAddAssets" />
+                <ScalarProperty Name="CanEditAssets" ColumnName="CanEditAssets" />
+                <ScalarProperty Name="CanAddParts" ColumnName="CanAddParts" />
+                <ScalarProperty Name="CanEditParts" ColumnName="CanEditParts" />
+                <ScalarProperty Name="ViewAssetDocs" ColumnName="ViewAssetDocs" />
+                <ScalarProperty Name="ViewPartDocs" ColumnName="ViewPartDocs" />
+                <ScalarProperty Name="ViewJobDocs" ColumnName="ViewJobDocs" />
+                <ScalarProperty Name="ViewAssetHistory" ColumnName="ViewAssetHistory" />
+                <ScalarProperty Name="ViewPartHistory" ColumnName="ViewPartHistory" />
+                <ScalarProperty Name="ViewJobHistory" ColumnName="ViewJobHistory" />
+                <ScalarProperty Name="CanEditSites" ColumnName="CanEditSites" />
+                <ScalarProperty Name="CanAddSites" ColumnName="CanAddSites" />
+                <ScalarProperty Name="ViewSiteDocs" ColumnName="ViewSiteDocs" />
+                <ScalarProperty Name="ViewSiteHistory" ColumnName="ViewSiteHistory" />
+                <ScalarProperty Name="JobRequestEmail" ColumnName="JobRequestEmail" />
+                <ScalarProperty Name="ShowOwnLogo" ColumnName="ShowOwnLogo" />
+                <ScalarProperty Name="NotifyCustomerOnJobCompletion" ColumnName="NotifyCustomerOnJobCompletion" />
+                <ScalarProperty Name="NotifyCustomerOnJobAssignment" ColumnName="NotifyCustomerOnJobAssignment" />
+                <ScalarProperty Name="NotifyCustomerOnJobCreation" ColumnName="NotifyCustomerOnJobCreation" />
+                <ScalarProperty Name="NotifyEngineerByEmailOfJobAssignment" ColumnName="NotifyEngineerByEmailOfJobAssignment" />
+                <ScalarProperty Name="CustomerEmailJobTemplate" ColumnName="CustomerEmailJobTemplate" />
+                <ScalarProperty Name="CustomerEmailJobSubject" ColumnName="CustomerEmailJobSubject" />
+                <ScalarProperty Name="CustomerEmailQuoteTemplate" ColumnName="CustomerEmailQuoteTemplate" />
+                <ScalarProperty Name="CustomerEmailQuoteSubject" ColumnName="CustomerEmailQuoteSubject" />
+                <ScalarProperty Name="EmailCompleteJobsInternallyTo" ColumnName="EmailCompleteJobsInternallyTo" />
+                <ScalarProperty Name="CustomerEmailPortalSettingsTemplate" ColumnName="CustomerEmailPortalSettingsTemplate" />
+                <ScalarProperty Name="CustomerEmailPortalSettingsSubject" ColumnName="CustomerEmailPortalSettingsSubject" />
+                <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+                <ScalarProperty Name="CompanyTargetID" ColumnName="CompanyTargetID" />
+                <ScalarProperty Name="dbEnabled" ColumnName="dbEnabled" />
+                <ScalarProperty Name="dbType" ColumnName="dbType" />
+                <ScalarProperty Name="dbUN" ColumnName="dbUN" />
+                <ScalarProperty Name="dbPW" ColumnName="dbPW" />
+                <ScalarProperty Name="dbToken" ColumnName="dbToken" />
+                <ScalarProperty Name="dbCustFolder" ColumnName="dbCustFolder" />
+                <ScalarProperty Name="dbSiteFolder" ColumnName="dbSiteFolder" />
+                <ScalarProperty Name="dbSuppFolder" ColumnName="dbSuppFolder" />
+                <ScalarProperty Name="dbJobsFolder" ColumnName="dbJobsFolder" />
+                <ScalarProperty Name="dbQuotesFolder" ColumnName="dbQuotesFolder" />
+                <ScalarProperty Name="dbAssetsFolder" ColumnName="dbAssetsFolder" />
+                <ScalarProperty Name="dbAssetPartsFolder" ColumnName="dbAssetPartsFolder" />
+                <ScalarProperty Name="dbOrdersFolder" ColumnName="dbOrdersFolder" />
+                <ScalarProperty Name="dbInvoicesFolder" ColumnName="dbInvoicesFolder" />
+                <ScalarProperty Name="dbContractsFolder" ColumnName="dbContractsFolder" />
+                <ScalarProperty Name="dbPurchaseOrdersFolder" ColumnName="dbPurchaseOrdersFolder" />
+                <ScalarProperty Name="APIEnabled" ColumnName="APIEnabled" />
+                <ScalarProperty Name="LocalDiallingCode" ColumnName="LocalDiallingCode" />
+                <ScalarProperty Name="dbProjectsFolder" ColumnName="dbProjectsFolder" />
+                <ScalarProperty Name="NotifyJobCustomerOnHold" ColumnName="NotifyJobCustomerOnHold" />
+                <ScalarProperty Name="NotifyJobsInCloseProximity" ColumnName="NotifyJobsInCloseProximity" />
+                <ScalarProperty Name="NotifyOnJobOverlap" ColumnName="NotifyOnJobOverlap" />
+                <ScalarProperty Name="Cal_ShowWH" ColumnName="Cal_ShowWH" />
+                <ScalarProperty Name="Cal_ShowCostings" ColumnName="Cal_ShowCostings" />
+                <ScalarProperty Name="Cal_ShowTimeUtil" ColumnName="Cal_ShowTimeUtil" />
+                <ScalarProperty Name="RequireStockToAssignJob" ColumnName="RequireStockToAssignJob" />
+                <ScalarProperty Name="Job_ReqCustSig" ColumnName="Job_ReqCustSig" />
+                <ScalarProperty Name="Job_ReqUserSig" ColumnName="Job_ReqUserSig" />
+                <ScalarProperty Name="Order_ConsolQuantities" ColumnName="Order_ConsolQuantities" />
+                <ScalarProperty Name="Order_ChargeParts" ColumnName="Order_ChargeParts" />
+                <ScalarProperty Name="Order_ChargeLabour" ColumnName="Order_ChargeLabour" />
+                <ScalarProperty Name="Order_ChargeExpenses" ColumnName="Order_ChargeExpenses" />
+                <ScalarProperty Name="Order_ShowContractDesc" ColumnName="Order_ShowContractDesc" />
+                <ScalarProperty Name="Order_CheckForContracts" ColumnName="Order_CheckForContracts" />
+                <ScalarProperty Name="Order_IncJobID" ColumnName="Order_IncJobID" />
+                <ScalarProperty Name="Order_IncWorkDone" ColumnName="Order_IncWorkDone" />
+                <ScalarProperty Name="Order_IncFurtherWork" ColumnName="Order_IncFurtherWork" />
+                <ScalarProperty Name="Order_IncJobUser" ColumnName="Order_IncJobUser" />
+                <ScalarProperty Name="Order_IncJobAddress" ColumnName="Order_IncJobAddress" />
+                <ScalarProperty Name="Order_IncJobAssetDetails" ColumnName="Order_IncJobAssetDetails" />
+                <ScalarProperty Name="Order_IncJobDate" ColumnName="Order_IncJobDate" />
+                <ScalarProperty Name="Order_ConsolTotalPriceForJob" ColumnName="Order_ConsolTotalPriceForJob" />
+                <ScalarProperty Name="Order_ConsolTotalPriceSeperatePartsLabour" ColumnName="Order_ConsolTotalPriceSeperatePartsLabour" />
+                <ScalarProperty Name="Order_TextItemNominalCode" ColumnName="Order_TextItemNominalCode" />
+                <ScalarProperty Name="Job_CopyFaultDetails" ColumnName="Job_CopyFaultDetails" />
+                <ScalarProperty Name="Order_IncWorkToBeDone" ColumnName="Order_IncWorkToBeDone" />
+                <ScalarProperty Name="Stock_ReduceOnJob" ColumnName="Stock_ReduceOnJob" />
+                <ScalarProperty Name="Stock_ReduceOnOrder" ColumnName="Stock_ReduceOnOrder" />
+                <ScalarProperty Name="Order_CarriageNominalCode" ColumnName="Order_CarriageNominalCode" />
+                <ScalarProperty Name="Job_CopyJobTypeDetails" ColumnName="Job_CopyJobTypeDetails" />
+                <ScalarProperty Name="SyncSageStock" ColumnName="SyncSageStock" />
+                <ScalarProperty Name="SyncSageStockOnce" ColumnName="SyncSageStockOnce" />
+                <ScalarProperty Name="SyncSageStockCount" ColumnName="SyncSageStockCount" />
+                <ScalarProperty Name="SyncSageStockMaxItems" ColumnName="SyncSageStockMaxItems" />
+                <ScalarProperty Name="SyncSageStockPageSize" ColumnName="SyncSageStockPageSize" />
+                <ScalarProperty Name="SyncSagePricesCount" ColumnName="SyncSagePricesCount" />
+                <ScalarProperty Name="SyncSagePricesMaxItems" ColumnName="SyncSagePricesMaxItems" />
+                <ScalarProperty Name="SyncSagePricesPageSize" ColumnName="SyncSagePricesPageSize" />
+                <ScalarProperty Name="SyncSageCustomers" ColumnName="SyncSageCustomers" />
+                <ScalarProperty Name="SyncSageCustomersCount" ColumnName="SyncSageCustomersCount" />
+                <ScalarProperty Name="SyncSageCustomersMaxItems" ColumnName="SyncSageCustomersMaxItems" />
+                <ScalarProperty Name="SyncSageCustomersPageSize" ColumnName="SyncSageCustomersPageSize" />
+                <ScalarProperty Name="SyncSageDeliveryAddressesCount" ColumnName="SyncSageDeliveryAddressesCount" />
+                <ScalarProperty Name="SyncSageDeliveryAddressesMaxItems" ColumnName="SyncSageDeliveryAddressesMaxItems" />
+                <ScalarProperty Name="SyncSageDeliveryAddressesPageSize" ColumnName="SyncSageDeliveryAddressesPageSize" />
+                <ScalarProperty Name="SyncSageContacts" ColumnName="SyncSageContacts" />
+                <ScalarProperty Name="SyncSageContactsCount" ColumnName="SyncSageContactsCount" />
+                <ScalarProperty Name="SyncSageContactsMaxItems" ColumnName="SyncSageContactsMaxItems" />
+                <ScalarProperty Name="SyncSageContactsPageSize" ColumnName="SyncSageContactsPageSize" />
+                <ScalarProperty Name="SyncSageSuppliers" ColumnName="SyncSageSuppliers" />
+                <ScalarProperty Name="SyncPostSite" ColumnName="SyncPostSite" />
+                <ScalarProperty Name="SyncSage" ColumnName="SyncSage" />
+                <ScalarProperty Name="SyncSageDeliveryAddresses" ColumnName="SyncSageDeliveryAddresses" />
+                <ScalarProperty Name="SyncSageContactsEmails" ColumnName="SyncSageContactsEmails" />
+                <ScalarProperty Name="SyncSageContactsTels" ColumnName="SyncSageContactsTels" />
+                <ScalarProperty Name="SyncSageContactsAddresses" ColumnName="SyncSageContactsAddresses" />
+                <ScalarProperty Name="SyncSageCustomersEmails" ColumnName="SyncSageCustomersEmails" />
+                <ScalarProperty Name="SyncSageCustomersTels" ColumnName="SyncSageCustomersTels" />
+                <ScalarProperty Name="SyncOrdersAlwaysSync" ColumnName="SyncOrdersAlwaysSync" />
+                <ScalarProperty Name="SyncPOrdersAlwaysSync" ColumnName="SyncPOrdersAlwaysSync" />
+                <ScalarProperty Name="UseTextMarketing" ColumnName="UseTextMarketing" />
+                <ScalarProperty Name="tmUsername" ColumnName="tmUsername" />
+                <ScalarProperty Name="tmPassword" ColumnName="tmPassword" />
+                <ScalarProperty Name="ResellerID" ColumnName="ResellerID" />
+                <ScalarProperty Name="Invoice_Borderless" ColumnName="Invoice_Borderless" />
+                <ScalarProperty Name="AllowZeroStockOnDevice" ColumnName="AllowZeroStockOnDevice" />
+                <ScalarProperty Name="AllowSearchAllCustomerSites" ColumnName="AllowSearchAllCustomerSites" />
+                <ScalarProperty Name="AutoRefreshJobList" ColumnName="AutoRefreshJobList" />
+                <ScalarProperty Name="CustomersDropdown" ColumnName="CustomersDropdown" />
+                <ScalarProperty Name="TypeOfRates" ColumnName="TypeOfRates" />
+                <ScalarProperty Name="itemUnspecified" ColumnName="itemUnspecified" />
+                <ScalarProperty Name="accountAPName" ColumnName="accountAPName" />
+                <ScalarProperty Name="accountARName" ColumnName="accountARName" />
+                <ScalarProperty Name="accountExpenseName" ColumnName="accountExpenseName" />
+                <ScalarProperty Name="accountIncomeName" ColumnName="accountIncomeName" />
+                <ScalarProperty Name="QBOSync" ColumnName="QBOSync" />
+                <ScalarProperty Name="QBOPayments" ColumnName="QBOPayments" />
+                <ScalarProperty Name="QBOPaymentsNo" ColumnName="QBOPaymentsNo" />
+                <ScalarProperty Name="QBOCustomers" ColumnName="QBOCustomers" />
+                <ScalarProperty Name="QBOCustomersNo" ColumnName="QBOCustomersNo" />
+                <ScalarProperty Name="QBOSites" ColumnName="QBOSites" />
+                <ScalarProperty Name="QBOSitesNo" ColumnName="QBOSitesNo" />
+                <ScalarProperty Name="QBOSuppliers" ColumnName="QBOSuppliers" />
+                <ScalarProperty Name="QBOSuppliersNo" ColumnName="QBOSuppliersNo" />
+                <ScalarProperty Name="QBOTaxCodes" ColumnName="QBOTaxCodes" />
+                <ScalarProperty Name="QBOTaxCodesNo" ColumnName="QBOTaxCodesNo" />
+                <ScalarProperty Name="QBOOrders" ColumnName="QBOOrders" />
+                <ScalarProperty Name="QBOOrdersNo" ColumnName="QBOOrdersNo" />
+                <ScalarProperty Name="QBOPurchaseOrders" ColumnName="QBOPurchaseOrders" />
+                <ScalarProperty Name="QBOPurchaseOrdersNo" ColumnName="QBOPurchaseOrdersNo" />
+                <ScalarProperty Name="QBOPaymentTypes" ColumnName="QBOPaymentTypes" />
+                <ScalarProperty Name="QBOPaymentTypesNo" ColumnName="QBOPaymentTypesNo" />
+                <ScalarProperty Name="QBOStock" ColumnName="QBOStock" />
+                <ScalarProperty Name="QBOStockNo" ColumnName="QBOStockNo" />
+                <ScalarProperty Name="AllowSearchAllSiteCustomers" ColumnName="AllowSearchAllSiteCustomers" />
+                <ScalarProperty Name="SearchSitesInCustomersList" ColumnName="SearchSitesInCustomersList" />
+                <ScalarProperty Name="SearchCustomersInSitesList" ColumnName="SearchCustomersInSitesList" />
+                <ScalarProperty Name="AlwaysShowCurrentPosition" ColumnName="AlwaysShowCurrentPosition" />
+                <ScalarProperty Name="IsShowLastPosition" ColumnName="IsShowLastPosition" />
+                <ScalarProperty Name="SetDefaultPosition" ColumnName="SetDefaultPosition" />
+                <ScalarProperty Name="PrefixJobId" ColumnName="PrefixJobId" />
+                <ScalarProperty Name="SuffixJobId" ColumnName="SuffixJobId" />
+                <ScalarProperty Name="DefaultAddress1" ColumnName="DefaultAddress1" />
+                <ScalarProperty Name="DefaultAddress2" ColumnName="DefaultAddress2" />
+                <ScalarProperty Name="DefaultAddress3" ColumnName="DefaultAddress3" />
+                <ScalarProperty Name="DefaultAddress4" ColumnName="DefaultAddress4" />
+                <ScalarProperty Name="DefaultCity" ColumnName="DefaultCity" />
+                <ScalarProperty Name="DefaultState" ColumnName="DefaultState" />
+                <ScalarProperty Name="DefaultCountry" ColumnName="DefaultCountry" />
+                <ScalarProperty Name="DefaultZipCode" ColumnName="DefaultZipCode" />
+                <ScalarProperty Name="DefaultFilterJobsAssets" ColumnName="DefaultFilterJobsAssets" />
+                <ScalarProperty Name="UsesQuickbooks" ColumnName="UsesQuickbooks" />
+                <ScalarProperty Name="UsesSage300" ColumnName="UsesSage300" />
+                <ScalarProperty Name="SyncSage300" ColumnName="SyncSage300" />
+                <ScalarProperty Name="UsesSap" ColumnName="UsesSap" />
+                <ScalarProperty Name="SyncSap" ColumnName="SyncSap" />
+                <ScalarProperty Name="dbSalesInvoicesFolder" ColumnName="dbSalesInvoicesFolder" />
+                <ScalarProperty Name="dbCreditNotesFolder" ColumnName="dbCreditNotesFolder" />
+                <ScalarProperty Name="dbPurchaseInvoicesFolder" ColumnName="dbPurchaseInvoicesFolder" />
+                <ScalarProperty Name="DocStorageCapacity" ColumnName="DocStorageCapacity" />
+                <ScalarProperty Name="TotalUsedStorage" ColumnName="TotalUsedStorage" />
+                <ScalarProperty Name="JobCostsCalculationType" ColumnName="JobCostsCalculationType" />
+                <ScalarProperty Name="UseCostsFromPO" ColumnName="UseCostsFromPO" />
+                <ScalarProperty Name="UsedJobRevenueType" ColumnName="UsedJobRevenueType" />
+                <ScalarProperty Name="JobOrder" ColumnName="JobOrder" />
+                <ScalarProperty Name="EnableFPriceForCustomer" ColumnName="EnableFPriceForCustomer" />
+                <ScalarProperty Name="ServiceLinkCompany" ColumnName="ServiceLinkCompany" />
+                <ScalarProperty Name="Job_UseSiteMailPhone" ColumnName="Job_UseSiteMailPhone" />
+                <ScalarProperty Name="Job_UseCustomerMailPhone" ColumnName="Job_UseCustomerMailPhone" />
+                <ScalarProperty Name="IsPaidForGPS" ColumnName="IsPaidForGPS" />
+                <ScalarProperty Name="MergeProjOnCompletion" ColumnName="MergeProjOnCompletion" />
+                <ScalarProperty Name="MergeProjCharges" ColumnName="MergeProjCharges" />
+                <ScalarProperty Name="MergeProjParts" ColumnName="MergeProjParts" />
+                <ScalarProperty Name="MergeProjComments" ColumnName="MergeProjComments" />
+                <ScalarProperty Name="MergeProjForms" ColumnName="MergeProjForms" />
+                <ScalarProperty Name="AutoConvertSDToJob" ColumnName="AutoConvertSDToJob" />
+                <ScalarProperty Name="DaysToCleanGPSData" ColumnName="DaysToCleanGPSData" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
