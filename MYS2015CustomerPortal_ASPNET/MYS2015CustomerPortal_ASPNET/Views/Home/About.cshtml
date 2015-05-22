@@ -8,22 +8,93 @@
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+@**@
+@*@(Html.Kendo().Grid<Customer>()*@
+@*      .Name("grid")*@
+@*      .DataSource(dataSource => dataSource // Configure the grid data source*@
+@*          .Ajax() // Specify that ajax binding is used*@
+@*              .Read(read => read.Action("GetCustomers", "Home")) // Set the action method which will return the data in JSON format*@
+@*       )*@
+@*      .Columns(columns =>*@
+@*      {*@
+@*          // Create a column bound to the ProductID property*@
+@*          columns.Bound(product => product.BillingEmail);*@
+@*          // Create a column bound to the ProductName property*@
+@*          columns.Bound(product => product.Phone);*@
+@*          // Create a column bound to the UnitsInStock property*@
+@*          columns.Bound(product => product.CustomerName);*@
+@*      })*@
+@*      .Pageable() // Enable paging*@
+@*      .Sortable() // Enable sorting*@
+@*      )*@
+@**@
+
+
+@*@(Html.Kendo().Grid<Customer>()*@
+@*      .Name("grid")*@
+@*      .Columns(columns =>*@
+@*      {*@
+@*          // Create a column bound to the UnitsInStock property*@
+@*          columns.Bound(product => product.CustomerID);*@
+@*          columns.Bound(product => product.BillingEmail).Width(100);*@
+@*          // Create a column bound to the ProductName property*@
+@*          columns.Bound(product => product.Phone);*@
+@*          // Create a column bound to the UnitsInStock property*@
+@*          columns.Bound(product => product.CustomerName);*@
+@*          columns.Command(commands =>*@
+@*          {*@
+@*              commands.Destroy(); // The "destroy" command removes data items*@
+@*          }).Title("Commands").Width(200);*@
+@*      })*@
+@*      .ToolBar(toolbar =>*@
+@*      {*@
+@*          toolbar.Create(); // The "create" command adds new data items*@
+@*          toolbar.Save(); // The "save" command saves the changed data items*@
+@*      })*@
+@*      .Editable(editable => editable.Mode(GridEditMode.InCell)) // Use in-cell editing mode*@
+@*      .DataSource(dataSource =>*@
+@*          dataSource.Ajax()*@
+@*            .Batch(true) // Enable batch updates*@
+@*            .Model(model =>*@
+@*            {*@
+@*                model.Id(product => product.CustomerID); // Specify the property which is the unique identifier of the model*@
+@*                model.Field(product => product.CustomerID).Editable(false); // Make the ProductID property not editable*@
+@*            })*@
+@*                .Read(read => read.Action("GetCustomers", "Home"))*@
+@*                .Update(update => update.Action("Customers_Update", "Home"))  // Action method invoked when the user saves an updated data item*@
+@*            *@
+@*      )*@
+@*      .Pageable()*@
+@*      )*@
+
+
+
 
 @(Html.Kendo().Grid<Customer>()
       .Name("grid")
-      .DataSource(dataSource => dataSource // Configure the grid data source
-          .Ajax() // Specify that ajax binding is used
-              .Read(read => read.Action("GetCustomers", "Home")) // Set the action method which will return the data in JSON format
-       )
       .Columns(columns =>
       {
-          // Create a column bound to the ProductID property
+          columns.Bound(product => product.CustomerID).Width(100);
           columns.Bound(product => product.BillingEmail);
-          // Create a column bound to the ProductName property
-          columns.Bound(product => product.Phone);
-          // Create a column bound to the UnitsInStock property
-          columns.Bound(product => product.CustomerName);
+          columns.Bound(product => product.Phone).Width(250);
+          columns.Command(commands =>
+          {
+              commands.Edit(); // The "edit" command will edit and update data items
+          }).Title("Commands").Width(200);
       })
-      .Pageable() // Enable paging
-      .Sortable() // Enable sorting
-      )
+      .ToolBar(toolbar => toolbar.Create()) // The "create" command adds new data items
+      .Editable(editable => editable.Mode(GridEditMode.InLine)) // Use inline editing mode
+      .DataSource(dataSource =>
+          dataSource.Ajax()
+            .Model(model =>
+            {
+                model.Id(product => product.CustomerID); // Specify the property which is the unique identifier of the model
+                model.Field(product => product.CustomerID).Editable(false); // Make the ProductID property not editable
+            })
+                .Create(create => create.Action("Products_Create", "Home")) // Action invoked when the user saves a new data item
+                .Read(read => read.Action("GetCustomers", "Home"))  // Action invoked when the grid needs data
+                .Update(update => update.Action("Customers_Update", "Home"))  // Action invoked when the user saves an updated data item
+                .Destroy(destroy => destroy.Action("Customers_Update", "Home")) // Action invoked when the user removes a data item
+            )
+      .Pageable()
+)

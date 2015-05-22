@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using System.Web.Script.Serialization;
+using Breeze.Sharp;
 
 namespace MYS2015Data.Models.Company
 {
